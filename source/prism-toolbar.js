@@ -42,11 +42,18 @@
         'moviePath': moviePath
       });
 
-      clip.on('ready', function(){
+      clip.on('ready', function() {
         //Set the clipboard data by accessing prism's env.code
-        clip.on('copy', function(event){
+        clip.on('copy', function(event) {
           var clipboard = event.clipboardData;
           clipboard.setData( "text/plain", env.code );
+        });
+
+        clip.on('aftercopy', function() {
+          linkCopy.innerHTML = 'Copied!';
+          setTimeout(function(){
+            linkCopy.innerHTML = 'Copy';
+          }, 2000);
         });
       });
 
