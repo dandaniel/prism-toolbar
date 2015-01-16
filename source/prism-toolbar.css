@@ -5,7 +5,7 @@ pre.code-toolbar {
 pre.code-toolbar > .toolbar {
   position: absolute;
   bottom: 5px;
-  right: -5px;
+  right: 0px;
 }
 
 pre.code-toolbar > .toolbar a {
